@@ -1,3 +1,6 @@
+from dataclasses import InitVar
+
+
 try:
     # for Python2
     from Tkinter import *   ## notice capitalized T in Tkinter 
@@ -5,11 +8,12 @@ except ImportError:
     # for Python3
     from tkinter import *   ## notice lowercase 't' in tkinter here
 
+
 class notebook(object): 
 	def __init__(self, master, side=LEFT): 
 		self.active_fr = None 
 		self.count = 0 
-		self.choice = IntVar(0) 
+		self.choice = InitVar(0) 
 		if side in (TOP, BOTTOM): 
 			self.side = LEFT 
 		else: self.side = TOP 
