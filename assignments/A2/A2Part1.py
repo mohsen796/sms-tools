@@ -28,5 +28,3 @@ def genSine(A, f, phi, fs, t):
     t = np.arange(0, t, 1.0 / fs)
     return A * np.cos(2 * np.pi * f * t + phi)
 
-
-print(genSine(1.0,10,1,50,0.1))
