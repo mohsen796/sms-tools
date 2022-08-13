@@ -31,7 +31,7 @@ def DFT(x):
         for n in range(N):
             out[k]+=x[n]*np.exp(-1j*2*np.pi*k*n/N)
 
-    print(out)
+    return(out)
 
 
 

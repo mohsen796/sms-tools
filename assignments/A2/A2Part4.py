@@ -38,5 +38,5 @@ def IDFT(X):
         for k in range(N):
             out[n]+=X[k]*np.exp(1j*2*np.pi*k*n/N)
         out[n]/=N
-    print(out)
+    return(out)
 
