@@ -21,4 +21,12 @@ def genMagSpec(x):
         magX (numpy array) = The magnitude spectrum of the input sequence x
                              (length N)
     """
-    ## Your code here
+    N=len(x)
+    dft=np.zeros(N,dtype=np.complex_)
+    for k in range(N):
+        for n in range(N):
+            dft[k]+=x[n]*np.exp(-1j*2*np.pi*k*n/N)
+    out=np.abs(dft)
+    return(out)
+
+print(genMagSpec(np.array([1, 2, 3, 4])))
